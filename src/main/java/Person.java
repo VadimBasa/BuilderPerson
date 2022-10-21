@@ -25,6 +25,7 @@ public class Person {
         // }else return false;
         return age > 0;
     }
+
     public boolean hasAddress() {
         //if (city != null){
         //     return true;
@@ -35,12 +36,15 @@ public class Person {
     public String getName() {
         return name;
     }
+
     public String getSurname() {
         return surname;
     }
+
     public OptionalInt getAge() {
         return OptionalInt.of(age);
     }
+
     public String getAddress() {
         return address;
     }
@@ -49,6 +53,7 @@ public class Person {
         this.address = address;
         return this.address;
     }
+
     public void happyBirthday() {
         if (hasAge()) age++;
     }
@@ -57,9 +62,10 @@ public class Person {
         return new PersonBuilder().setSurname(surname).setAddress(address);
 
     }
+
     @Override
     public String toString() {
-        return  "Person{" +"name= " + name + ", surname= " + surname + ", age= " + age + ", address= " + address +
+        return "Person{" + "name= " + name + ", surname= " + surname + ", age= " + age + ", address= " + address +
                 '}';
     }
 
